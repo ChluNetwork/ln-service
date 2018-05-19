@@ -68,7 +68,7 @@ app.use(compress);
 app.use(cors());
 app.use(bodyParser.json());
 app.use(logger(logFormat));
-app.use(basicAuth({authorizer, authorizeAsync: true}));
+//app.use(basicAuth({authorizer, authorizeAsync: true}));
 
 app.use('/v0/addresses', addressesRouter({lnd, log}));
 app.use('/v0/balance', balanceRouter({lnd, log}));
